@@ -1,0 +1,32 @@
+Objet : Programme create_story
+
+Arguments nécessaires au bon fonctionnement du programme, à faire suivre dans l'ordre : 
+	--> Un fichier texte contenant une histoire à raconter et incluant les chaines de caractère "$(dob)","$(name)"
+	--> Un fichier csv contenant au minimum les trois variables suivantes "$dob", "$name" et "$id"
+	--> Un entier représentant un identifiant valide présent dans le fichier csv
+
+Affichage normal du programme : 
+	--> Affichage des variables "$id", "$name" et "$dob" du carnet et classés par ordre d'identifiant croissant
+	--> Affichage de l'histoire dont les chaine "$(name)" et "$(dob)" ont été remplacées par le nom et la date de naissance de la personne concernée par l'identifiant
+
+Messages d'erreurs possibles : 
+	--> Error 1 : Running out of arguments		: indique un nombre d'argument trop peu suffisant
+	--> Error 3 : Story ... not found		: indique que le fichier d'histoire n'a pas pu être trouvé
+	--> Error 4 : Address book ... not found 	: indique que le carnet n'a pas pu être ouvert
+	--> Error 5 : Id ... not found in ... 		: indique que l'identifiant n'a pas été trouvé dans le carnet
+
+Ce code prend en compte les différents cas suivants : 
+	--> Gestion des arguments : 	*Nombre d'arguments minimum requis
+	--> Rédaction de l'histoire : 	*Chaines de caractères à remplacer attachées à d'autres caractères
+					*Histoire rédigée sur plusieurs lignes
+	--> Rédaction du carnet : 	*Variables placées dans le désordre
+					*Présence de variables supplémentaires inutiles pour ce code
+	--> Variables du carnet : 	*Vérification de la validité de la date de naissance
+					*Suppression des 0 superflus présents dans l'id ou dans la date de naissance
+
+Attention ce code contient cependant certaines lacunes telles que : 
+	--> Non vérification de la validité des arguments (une image pourrait très bien être lue et considérée comme fichier texte par exemple)
+	--> l'intéraction homme-machine : lorsqu'une erreur est détectée on ne propose pas ici de la corriger
+	--> La possibilité de voir uniquement l'affichage du carnet ou uniquement l'affichage de l'histoire
+
+La batterie de tests et leurs description est disponible dans le fichier TestProgramme dans le répertoire script

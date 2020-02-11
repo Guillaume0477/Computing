@@ -1,0 +1,61 @@
+Afin de tester la bonne exécution du programme, plusieurs manipulations peuvent être effectuées
+Le but final étant toujours d'obtenir le négatif de l'image ou une erreur relative à la faute commise
+
+- Tester avec une image décrite comme dans l'énoncé de l'exercice, codée comme suit : 
+
+P3
+... //Commentaires possibles
+w h //largeur et hauteur de l'image en nombre de pixels
+255
+R V B // Valeurs relatives au premier pixel
+R V B // Valeurs relatives au second pixel
+...
+R V B // Valeurs relatives au troisième pixel
+
+	--> Après avoir compilé le code, taper "./negatif ../data/couleur.ppm" ou "./negatif ../data/image.ppm"
+
+- Tester avec une image décrite comme lors de la conversion par l'outil gimp par exemple, codée comme suit :
+
+P3
+... //Commentaires possibles
+w h //hauteur et largeur de l'image en pixels
+255
+R //Valeur du rouge du premier pixel
+V //Valeur du vert du premier pixel
+B //Valeur du bleu du premier pixel
+....
+R //Valeur du rouge du dernier pixel
+V //Valeur du vert du dernier pixel
+B //Valeur du bleu du dernier pixel
+
+	--> Après avoir compilé le code, taper "./negatif ../data/cochon.ppm"
+
+- Tester avec une image décrite (au moins en partie) comme dans la présentation donnée sur Wikipédia, codée comme suit : 
+
+P3
+... //Commentaires possibles
+w h //largeur et hauteur de l'image en pixels
+255
+R V B R V B R V B ..... R V B //Valeurs relatives à tous les pixels de la première ligne
+R V B R V B R V B ..... R V B //Valeurs relatives à tous les pixels de la seconde ligne
+.....
+R V B R V B R V B ..... R V B //Valeurs relatives à tous les pixels de la dernière ligne
+
+	--> Après avoir compilé le code, taper "./negatif ../data/cobaya.ppm"
+
+Remarque : le test précédent est également valable tant que les lignes sont composées de 1 valeur ou d'un multuple de trois valeurs
+
+- Test quant à la bonne obtention de l'image en négatif :
+
+	--> Après avoir compilé le code, taper "./negatif ../data/cochon.ppm"
+	--> Observer l'obtention d'une nouvelle image
+	--> Taper ensuite "./negatif ../data/cochon-neg.ppm"
+	--> Observer la restitution de l'image initiale
+
+- Test quant aux différents messages d'erreur :
+
+	--> Après avoir compilé le code, taper "./negatif"
+	--> Observer l'apparition d'une erreur indiquant un trop peu d'argument de la fonction
+	--> Taper ensuite "./negatif toto.ppm"
+	--> Observer l'apparition d'une erreur indiquant un fichier introuvable
+

@@ -1,0 +1,26 @@
+Objet : Programme negatif
+
+Arguments nécessaires au bon fonctionnement du programme, à faire suivre dans l'ordre : 
+	--> une image au format ppm (codée avec des caractères ASCII)
+
+Fonctionnement normal du programme : 
+	--> Création d'une image dont le suffixe est "-neg.ppm" contenant le négatif de l'image passée en argument 
+
+Messages d'erreurs possibles : 
+	--> Error 1 : Running out of arguments		: indique un nombre d'argument trop peu suffisant
+	--> Error 3 : Image ... not found 		: indique que l'image n'a pas pu être chargée ou que celle ci est vide
+
+Ce code prend en compte les différents cas suivants : 
+	--> Gestion des arguments : 	*Nombre d'arguments minimum requis
+	--> Rédaction de l'image : 	*une valeur de canal couleur par ligne (3 lignes code 1 pixel)
+					*3 valeurs de canal couleur par ligne (1 ligne code 1 pixel)
+					*un multiple de 3 valeurs de canal couleur par ligne (1 ligne codant plusieurs pixels)
+					*Possible utilisation de commentaires avant la spécification de la hauteur et de la largeur de l'image
+
+Attention ce code contient cependant certaines lacunes telles que : 
+	--> Non vérification de la validité des arguments (un fichier texte pourrait très bien être lue et considérée comme fichier image par exemple et une erreur "imprévue" aurait lieu)
+	--> Prise en compte que des format ppm codé avec des caratères ASCII
+	--> l'intéraction homme-machine : lorsqu'une erreur est détectée on ne propose pas ici de la corriger
+	--> La possibilité de choisir la transformation à effectuer sur l'image (negatif, seuillage, nuance de gris, nuance de rouge/bleu/vert ...)
+
+La batterie de tests et leurs description est disponible dans le fichier TestProgramme dans le répertoire script

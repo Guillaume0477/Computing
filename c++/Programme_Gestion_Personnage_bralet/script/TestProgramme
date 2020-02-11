@@ -1,0 +1,36 @@
+Afin de pouvoir tester le bon fonctionnement du programme, plusieurs tests s'imposent
+
+- Test du fonctionnement "normal" du programme : 
+	--> Après la compilation du code, taper "./create_story ../data/histoire1.text ../data/carnet.csv 2"
+	--> Le résultat doit être le suivant : 
+		"1 Jean 26/7/2011
+		 2 Riton 12/1/1919
+		 3 Paul 25/8/2001
+		 Il etait une fois un petit bonhomme appele Riton ne le 12/1/1919 qui mangeait trois produit laitiers par jour."
+	--> Ce qui correspond à la liste des personnes présentes dans le carnet puis à raconter l'histoire de la personne concernée par le numéro d'identifiant donné en argument (ici 2)
+
+- Test du fonctionnement avec un carnet dans le désordre :
+	--> Après compilation du code, taper "./create_story ../data/histoire1.text ../data/carnet2.csv 2"
+	--> Le résultat doit être le même que le précédent
+
+- Test du fonctionnement avec un carnet contenant plus d'information que nécessaire
+	--> Après compilation du code, taper "./create_story ../data/histoire1.text ../data/carnet3.csv 2"
+	--> Le résultat doit être le même que le précédent
+
+- Test du fonctionnement avec une histoire où la chaine à modifier est attachée à d'autres caractères
+	--> Après compilation du code, taper "./create_story ../data/histoire2.text ../data/carnet.csv 2"
+	--> le résultat doit être le suivant : 
+		"1 Jean 26/7/2011
+		 2 Riton 12/1/1919
+		 3 Paul 25/8/2001
+		 Il etait une fois un petit bonhomme appele Riton ne le 12/1/1919 qui mangeait trois produit laitiers par jour. Riton12/1/1919"
+
+- Test des différentes erreurs prises en charge par le programme
+	--> Après la compilation du code, taper "./create_story"
+	--> Une erreur relative au trop peu d'argument apparait à l'écran
+	--> Taper "./create_story toto.txt ../data/carnet.csv 2"
+	--> Après affichage du carnet trié, une erreur apparait relative au nom du fichier texte introuvable
+	--> Taper "./create_story ../data/histoire1.txt toto.csv 2"
+	--> Une erreur relative au nom du carnet csv introuvable apparait
+	--> Taper "./create_story ../data/histoire1.txt ../data/carnet.csv 10"
+	--> Après affichage du carnet trié, une erreur apparait relative à la sélection d'un identifiant inexistant dans le carnet

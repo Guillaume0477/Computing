@@ -1,0 +1,6 @@
+je m'appelle $(name) et je suis né en $(dob).
+je m'appelle $(name) et je suis né en $(dob).
+je m'appelle $(name) et je suis né en $(dob).
+je m'appelle $(name) et je suis né en $(dob).
+je m'appelle $(name) et je suis né en $(dob).
+je m'appelle $(name) et je suis né en $(dob).
