@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+	printf("la taille d'un char en octet est %ld\n", sizeof(char));
+	printf("la taille d'un short en octet est %ld\n", sizeof(short));
+	printf("la taille d'un int en octet est %ld\n", sizeof(int));
+	printf("la taille d'un long int en octet est %ld\n", sizeof(long int));
+	printf("la taille d'un long long int en octet est %ld\n", sizeof(long long int));
+	printf("la taille d'un float en octet est %ld\n", sizeof(float));
+	printf("la taille d'un double en octet est %ld\n", sizeof(double));
+	printf("la taille d'un long double en octet est %ld\n", sizeof(long double));
+	printf("la taille d'un unsigned int en octet est %ld\n", sizeof(unsigned int));
+	printf("la taille d'un unsigned long int en octet est %ld\n", sizeof(unsigned long int));
+	printf("la taille d'un unsigned long long int en octet est %ld\n", sizeof(unsigned long long int));
+	printf("la taille d'un unsigned float en octet est %ld\n", sizeof(unsigned float));
+	printf("la taille d'un unsigned double en octet est %ld\n", sizeof(unsigned double));
+	printf("la taille d'un unsigned long double en octet est %ld\n", sizeof(unsigned long double));
+	printf("la taille d'un unsigned short en octet est %ld\n", sizeof(unsigned short));
+	printf("la taille d'un unsigned char en octet est %ld\n", sizeof(unsigned char));
+}

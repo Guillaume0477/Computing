@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+int compte_couleur(char *list){
+	struct trieur {
+		char couleur[30];
+		int cpt;
+	};
+	struct trieur color[100];
+	
+	int def = 0;
+	int i;
+	int j;
+	for (i = 0; i < 100; i++) {
+		for (j = 0; j < 100; j++) {
+			if (j > def) {
+				strcpy(color[def].couleur, list[i]);
+				color[def].cpt = 1;
+				def++;
+				break;
+			} else if (strcmp(list[i], color[j].couleur) == 1) {
+				color[j].cpt++;
+				break;
+			}
+		}
+	}
+	for (i = 0; i < def; i++) {
+		printf("%s , %d", color[i].couleur, color[i].cpt);
+	}
+
+	return(0);
+}
+
+int main(){
+
+	char capture[30];
+	char list[100][30];
+	int i = 0;
+
+	while (strcmp(capture, "FIN") != 0){
+		scanf("%[^\n]", capture);
+		while(getchar() != '\n');
+		strcpy(list[i], capture);
+		i++;
+	}
+	return(0);
+}

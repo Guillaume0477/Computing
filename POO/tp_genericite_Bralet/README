@@ -1,0 +1,49 @@
+Les sous répertoires compris dans ce dossier permettent d'aborder différents aspects du polymorphisme et des classes/fonctions templates.
+Toutes les notions abordées dans ces différents sous-dosssiers sont listées ci-dessous : 
+
+exercice_1 :    Création de la classe Bezier
+    - Création d'une classe "bezier" permettant de calcul la valeur d'une courbe de bézier à partir de ses coefficients initiaux
+    - Surcharge d'opérateurs : () permet d'obtenir la valeur de la courbe en un point passé en argument
+                               << permet d'afficher l'équation de la courbe
+    - Exportation et visualisation de la courbe sous Matlab à partir de coefficients flottants
+    
+exercice_2 :    Premières notions sur les Templates
+    - Évolution de la classe "bezier" en une classe template : celle ci peut recevoir tout types de coefficients sous certaines conditions : 
+            --> ce type doit posséder l'opérateur *,+,- et <<.
+    - Exportation et visualisation de la courbe sous Matlab à partir de coefficients flottants 
+
+exercice_3 :    Exemple d'utilisation de classe Templates
+    - Illustration de la puissance des templates : les coefficients sont de type vec2
+    - Exportation et visualisation de la courbe sous Matlab à partir de coefficients de type vec2
+
+exercice_4 :    Exemple d'utilisation graphique de classes Templates
+    - Réutilisation du programme précédent
+    - Exemple d'utilisation graphique de ce programme
+    
+exercice_5 :    Introduction au Polymorphisme
+    - Création d'une SuperClasse "geometrical_object"
+    - Création d'une classe "circle" héritée de "geometrical_object"
+    - Modification de "bezier" pour qu'elle hérite de "geometrical_object"
+    - Utilisation du concept de fonction "virtual" : fonction créée dans une superclasse mais non définie, elle doit etre obligatoirement définie par les héritiers
+    - Création d'une nouvelle fonction "closest_point" permettant de déterminer quel est le point d'un objet géométrique le plus proche d'un point donné au préalable
+
+exercice_6 :    Illustration de l'intéret du polymorphisme
+    - Réutilisation des codes précédents pour générer une intéraction utilisateur et courbe et permettre de tracer un trait entre la position de la souris et le point d'un objet le plus proche
+    
+exercice_7 :    Générallisation à toute sorte de courbes de bézier
+    - Modification de la classe bezier pour qu'elle ait un nouvel indicateur template (son ordre)
+    - Utilisation des "constexpr" pour optimiser les calculs dès la compilation
+    - Exportation des résultats et visualisation sous Matlab d'une courbe dont l'ordre est de 5
+
+QUESTION 1 : Pourquoi la définition des templates doit-elle être mise dans un .hpp et non pas dans le .cpp ?
+
+La définition de classes templates doit être mise dans un header car les classes templates sont constituées essentiellement d'éléments abstraits : tout dépend d'une variable qui n'est pas référencée. Ainsi, alors que les fichiers de type .cpp nécessitent des éléments concrets, le paramètre template devrait obligatoirement être renseigné au début du fichier, on perd alors le caractère universel de la classe template.
+En bref : une classe template n'est pas une réelle classe, c'est un patron de classe, un modèle.
+
+
+QUESTION 2 : Comment faire en sorte que d'accélérer la compilation ?
+
+Afin d'accélérer la compilation, il pourrait être intéressant de ne sélectionner que les types que l'on souhaite réellement utiliser au sein de la classe template (par exemple ici, les vec2, les float, les int, etc..) dont il est certain que les condition évoquées dans l'exercice 2 est réalisée. Après des recherches internets menées sur le sujet, nous avons constaté que l'instanciation explicite permettait de faire ce travail : plutot que de créer un nouvel objet de type bezier<vec2,n> à chaque fois que l'on crée un tel objet, il suffit de spécifier au compilateur que lorsque l'on appelle un objet de type bezier<> se sera nécessairement un objet de type bezier<vec2,N>. La différence réside en le fait que toutes les fonctions liées à la classe bezier<vec2,N> sont déjà connues par le compilateur qui peut donc les redistribuer au besoin lors de la création d'un nouvel objet.
+
+
+

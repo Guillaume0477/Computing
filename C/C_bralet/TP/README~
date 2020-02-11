@@ -1,0 +1,21 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Question 1
+	*Fichiers: serveur.c,serveur.h, client.c, client.h
+	*Bibliothèque:
+		*stdio.h
+		*string.h
+		*stdlib.h
+		*unistd.h
+		*sys/types.h
+		*sys/socket.h
+		*netinet/in.h
+		*sys/types.h
+		*sys/stat.h
+		*fcntl.h
+		*dirent.h
+	*Références: aucune
+	*Difficulté: moyen
+	*Commentaire : la majeure difficulté a été de comprendre le code avec les nouvelles bibliothèques et les nouvelles commandes.
+
+

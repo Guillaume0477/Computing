@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct trieur {
+	char couleur[30];
+	int cpt;
+} trieur;
+
+int compte_couleur(char *couleur, trieur *colors, int *def) {
+	int i;
+	int j;
+	for (i = 0; i <= *def; i++) {
+		printf("%d\n", i);
+		if (i == *def) {
+			strcpy(colors[*def].couleur, couleur);
+			colors[*def].cpt = 1;
+			(*def)++;
+			break;
+		}
+		if (strcmp(couleur, colors[i].couleur) == 0) {
+			colors[i].cpt++;
+			break;
+		}
+	}
+	return(0);
+}
+
+int main(){
+	int i = 0;
+	int def = 0;
+	int size;
+	size_t capt_size = 30;
+	char *capture = malloc(capt_size);
+
+	trieur colors[100];
+
+	while (strcmp(capture, "FIN") != 0){
+		size = getline(&capture, &capt_size, stdin);
+		capture[size - 1] = '\0';
+		if (strcmp(capture, "FIN") != 0) {
+			compte_couleur(capture, colors, &def);
+		}
+	}
+	for (i = 0; i < def; i++) {
+		printf("%s , %d\n", colors[i].couleur, colors[i].cpt);
+	}
+	return(0);
+}

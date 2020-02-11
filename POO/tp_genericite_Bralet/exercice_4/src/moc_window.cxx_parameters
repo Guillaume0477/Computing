@@ -1,0 +1,9 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-I/fs03/share/users/antoine.bralet/home/Bureau/Cours/Cpp/tp_genericite/exercice_4
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/fs03/share/users/antoine.bralet/home/Bureau/Cours/Cpp/tp_genericite/exercice_4/src/moc_window.cxx
+/fs03/share/users/antoine.bralet/home/Bureau/Cours/Cpp/tp_genericite/exercice_4/src/window.hpp

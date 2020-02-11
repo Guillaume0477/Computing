@@ -1,0 +1,6 @@
+Marche à suivre pour l'obtention des fichiers :
+	- se placer dans le dossier ./src
+	- compiler l'ensemble des fichiers à l'aide de la commande "make"
+	- l'ensemble des exécutables se trouvent dans le dossier ./src
+	- lors de l'exécution, l'arborescence demandée est "etudiant".
+

@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+
+int ecrire_dans_fichier(char *nom_de_fichier, char *message){
+	FILE* fd;
+	fd = fopen(nom_de_fichier, "a");
+	fwrite(message, strlen(message), 1, fd);
+	fclose(fd);
+	return(0);
+}
+
+int main(){
+	
+	struct etudiant {
+		char prenom[30];
+		char nom[30];
+		char adresse[100];
+		struct note {
+			char PC[5];
+			char SE[5];
+		} note;
+	};
+
+	int nombre;
+	char nom[30];
+	char prenom[30];
+	char adresse[100];
+	char note1[5];
+	char note2[5];
+	char nomf[] = "etudiant.txt";
+	char message[200];
+
+	printf("Nombre d'étudiants ?\n");
+	scanf("%d", &nombre) ;
+	while(getchar()!='\n');
+
+	struct etudiant CPE[nombre];
+
+	int i;
+	for (i = 0; i < nombre; i++) {
+		message[0] = '\0';
+		printf("Etudiants %d\n", i+1);
+		printf("Nom de l'étudiant ?\n");
+		scanf("%[^\n]", nom) ;
+		while(getchar()!='\n');
+
+		printf("Prénom de l'étudiants ?\n");
+		scanf("%[^\n]", prenom) ;
+		while(getchar()!='\n');
+
+		printf("Adresse de l'étudiants ?\n");
+		scanf("%[^\n]", adresse);
+		while(getchar()!='\n');
+
+		printf("Note de PC ?\n");
+		scanf("%[^\n]", note1) ;
+		while(getchar()!='\n');
+
+		printf("Note de SE ?\n");
+		scanf("%[^\n]", note2) ;
+		while(getchar()!='\n');
+
+		strcpy(CPE[i].prenom, nom);
+		strcpy(CPE[i].nom, prenom);
+		strcpy(CPE[i].adresse, adresse);
+		strcpy(CPE[i].note.PC, note1);
+		strcpy(CPE[i].note.SE, note2);
+
+		strcat(message, CPE[i].prenom);
+		strcat(message, ", ");
+		strcat(message, CPE[i].nom);
+		strcat(message, ", ");
+		strcat(message, CPE[i].adresse);
+		strcat(message, ", ");
+		strcat(message, CPE[i].note.PC);
+		strcat(message, ", ");
+		strcat(message, CPE[i].note.SE);
+		strcat(message, "\n");
+
+		ecrire_dans_fichier(nomf, message);
+	}
+	return(0);
+
+
+}

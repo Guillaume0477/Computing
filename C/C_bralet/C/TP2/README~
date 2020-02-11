@@ -1,0 +1,45 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Exercice 1
+	*Fichiers: etudiant.c
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 2
+	*Fichiers: etudiant2.c
+	*Bibliothèque:
+		*stdio.h
+		*string.h
+	*Références: https://stackoverflow.com/
+	*Difficulté: facile
+
+*Exercice 3
+	*Fichiers: couleur.c
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: ...
+
+*Exercice 4
+	*Fichiers: ptrvariables.c
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 5
+	*Fichiers: tableauptr.c
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 6
+	*Fichiers: cherche.c
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile

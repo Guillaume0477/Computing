@@ -1,0 +1,70 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Exercice 1
+	*Fichiers: bonjour.c, bonjour
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 2
+	*Fichiers: cirlce.c, circle
+	*Bibliothèque:
+		*stdio.h
+		*math.h
+	*Références: aucune
+	*Difficulté: facile
+	*commentaires
+		*utilisation de l'option -lm pour la compilation
+
+*Exercice 3
+	*Fichiers: sizeof_types.c, sizeof_types
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 4
+	*Fichiers: variables.c, variables
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 5
+	*Fichiers: operators.c, operators
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 6
+	*Fichiers: boucles.c, boucles
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 7
+	*Fichiers: operators2.c, operators2
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 8
+	*Fichiers: conditions.c, conditions
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 9
+	*Fichiers: binary.c, binary
+	*Bibliothèque:
+		*stdio.h
+		*math.h
+	*Références: aucune
+	*Difficulté: facile
+	*commentaires
+		*utilisation de l'option -lm pour la compilation

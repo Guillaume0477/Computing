@@ -1,0 +1,45 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Question 1
+	*Fichiers: operators.c operators.h
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 2
+	*Fichiers: octets.c
+	*Bibliothèque:
+		*stdio.h
+	*Difficulté: facile
+
+*Exercice 3
+	*Fichiers: fichier.c fichier.h
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 4
+	*Fichiers: calcule.c calcule.h
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 5
+	*Fichiers: tableauptr.c
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 6
+	*Fichiers: couleur_compteur.c
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+		*string.h
+	*Références: aucune
+	*Difficulté: première difficulté du module

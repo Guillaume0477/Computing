@@ -1,0 +1,63 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Question 1
+	*Fichiers: factorielle.c
+	*Bibliothèque:
+		*stdio.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Exercice 2
+	*Fichiers: repertoire.c repertoire.h
+	*Bibliothèque:
+		*stdio.h
+		*sys/types.h
+		*dirent.h
+	*Difficulté: moyenne
+	*Commentaire: 
+		- L'utilisation de readdir et opendir a nécessité de rechercher dans le manuel et une réflexion approfondie de notre part pour comprendre son fonctionnement ce qui fut intéressant.
+
+*Exercice 3
+	*Fichiers: repertoire.c repertoire.h
+	*Bibliothèque:
+		*stdio.h
+		*sys/types.h
+		*dirent.h
+		*string.h
+	*Références: aucune
+	*Difficulté: moyenne
+	*Commentaire: 
+		- Nous ne savions pas que DT_DIR était une variable.
+
+*Exercice 4
+	*Fichiers: chercherfichier.c
+	*Bibliothèque:
+		*stdio.h
+		*sys/types.h
+		*sys/stat.h
+		*fcntl.h
+		*unistd.h
+		*string.h
+	*Références: aucune
+	*Difficulté: moyenne
+
+*Exercice 5
+	*Fichiers: repertoire.c repertoire.h
+	*Bibliothèque:
+		*stdio.h
+		*sys/types.h
+		*dirent.h
+		*string.h
+	*Références: aucune
+	*Difficulté: moyenne
+
+*Exercice 6
+	*Fichiers: liste.c liste.h
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+		*string.h
+	*Références: aucune
+	*Difficulté: moyenne
+	*Commentaire : 
+		*nécessité d'utiliser un malloc parce que la mémoire se réallouait automatiquement après un "printf"

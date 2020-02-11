@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include "fichier.h"
+
+int lire_fichier(char *nom_de_fichier){
+	char contenu[1000];
+	int fd,count,size;
+	fd = open(nom_de_fichier, O_RDONLY);
+	size = read(fd, contenu, 1000);
+	for (count = 0; count < size ; count++){
+		printf("%c", contenu[count]);
+	}
+	printf("\n");
+	close(fd);
+	return(0);
+}
+
+int ecrire_dans_fichier(char *nom_de_fichier, char *message){
+	FILE* fd;
+	fd = fopen(nom_de_fichier, "a");
+	fwrite(message, strlen(message), 1, fd);
+	fclose(fd);
+	return(0);
+}
+
+int main(){
+	char message[10];
+	int choix;
+	char nom[30];
+
+	printf("Pour lire taper 1. Pour écrire tapez 2.");
+	scanf("%d", &choix);
+	
+	if (choix == 1){
+		printf("Quel fichier voulez vous lire ?");
+		scanf("%s", nom);
+		lire_fichier(nom);
+	} else if (choix == 2) {
+		printf("Dans quel fichier voulez vous écire ?");
+		scanf("%s", nom);
+		printf("Quel est votre message ?");
+		scanf("%s", message);
+		ecrire_dans_fichier(nom, message);
+	} else { 
+		printf("Choix incorrect");
+		return(1);
+	}
+}

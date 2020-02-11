@@ -1,0 +1,35 @@
+Ecrire, compiler et éxecuter les programmes C.
+
+*Question 1
+	*Fichiers: pile.c pile.h
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+	*Références: aucune
+	*Difficulté: facile
+
+*Question 2
+	*Fichiers: file.c file.h
+	*Bibliothèque:
+		*stdio.h
+		*stdlib.h
+	*Difficulté: facile
+	*Commentaire : l'utilisation d'une chaine doublement chainée ne nous a pas parru nécessaire pour la mise en oeuvre du programme
+
+*Question 3
+	*Fichiers: serveur.c serveur.h client.c client.h
+	*Bibliothèque:
+		*string.h
+		*stdio.h
+		*stdlib.h
+		*unistd.h
+		*sys/types.h
+		*sys/socket.h
+		*netinet/in.h
+		*sys/epoll.h
+	*Références: aucune
+	*Difficulté: facile
+	*Commentaire : Dans serveur.c, nous avons remarqué dans le programme de base que la variable n était nécessairement nulle 
+	*(en effet le n=atoi(token) renvoyait 0 car token = "couleur: 10") il semblerait que se soit une erreur de votre part qui
+	*pourrait mettre en déroute d'autres groupes.
+

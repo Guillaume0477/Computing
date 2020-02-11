@@ -1,0 +1,227 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>CourbeConteneurs</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-03-29"><meta name="DC.source" content="CourbeConteneurs.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">clear <span class="string">variables</span>;
+close <span class="string">all</span>;
+
+test = <span class="string">"test"</span>;
+
+datamap;
+
+figure(1)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,2))
+
+figure(2)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,3))
+
+figure(3)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,4))
+
+figure(4)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,5))
+
+figure(5)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,6))
+
+figure(6)
+hold <span class="string">on</span>;
+plot(x10(:,1),x10(:,7))
+
+datamultimap;
+
+figure(1)
+plot(x10(:,1),x10(:,2))
+
+figure(2)
+plot(x10(:,1),x10(:,3))
+
+figure(3)
+plot(x10(:,1),x10(:,4))
+
+figure(4)
+plot(x10(:,1),x10(:,5))
+
+figure(5)
+plot(x10(:,1),x10(:,6))
+
+figure(6)
+plot(x10(:,1),x10(:,7))
+
+test
+
+dataset1;
+
+figure(1)
+plot(x10(:,1),x10(:,2))
+
+figure(2)
+plot(x10(:,1),x10(:,3))
+
+figure(3)
+plot(x10(:,1),x10(:,4))
+
+figure(4)
+plot(x10(:,1),x10(:,5))
+
+figure(5)
+plot(x10(:,1),x10(:,6))
+
+figure(6)
+plot(x10(:,1),x10(:,7))
+
+test
+
+datamultiset;
+
+figure(1)
+plot(x10(:,1),x10(:,2))
+
+figure(2)
+plot(x10(:,1),x10(:,3))
+
+figure(3)
+plot(x10(:,1),x10(:,4))
+
+figure(4)
+plot(x10(:,1),x10(:,5))
+
+figure(5)
+plot(x10(:,1),x10(:,6))
+
+figure(6)
+plot(x10(:,1),x10(:,7))
+
+
+<span class="comment">%Param&Atilde;&uml;tre des figures</span>
+figure(1)
+title(<span class="string">'Temps d''ajout au d&eacute;but du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+
+figure(2)
+title(<span class="string">'Temps d''ajout en fin du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+
+figure(3)
+title(<span class="string">'Temps d''ajout en milieu du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+
+figure(4)
+title(<span class="string">'Temps de lecture au d&Atilde;&copy;but du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+
+figure(5)
+title(<span class="string">'Temps de lecture en fin du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+
+figure(6)
+title(<span class="string">'Temps de lecture au milieu du conteneur'</span>)
+legend(<span class="string">'Map'</span>, <span class="string">'Multimap'</span>, <span class="string">'Set'</span>, <span class="string">'Multiset'</span>)
+xlabel(<span class="string">'Nombre d''elements dans le conteneur'</span>)
+ylabel(<span class="string">'Temps en secondes'</span>)
+</pre><pre class="codeoutput">
+x10 =
+
+   1.0e+05 *
+
+    0.0001    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+    0.0005    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+    0.0010    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+    0.0100    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+    0.1000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+    1.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+
+test = 
+
+    "test"
+
+
+test = 
+
+    "test"
+
+</pre><img vspace="5" hspace="5" src="CourbeConteneurs_01.png" alt=""> <img vspace="5" hspace="5" src="CourbeConteneurs_02.png" alt=""> <img vspace="5" hspace="5" src="CourbeConteneurs_03.png" alt=""> <img vspace="5" hspace="5" src="CourbeConteneurs_04.png" alt=""> <img vspace="5" hspace="5" src="CourbeConteneurs_05.png" alt=""> <img vspace="5" hspace="5" src="CourbeConteneurs_06.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+clear variables;close all;test = "test";datamap;figure(1) hold on;plot(x10(:,1),x10(:,2))figure(2) hold on;plot(x10(:,1),x10(:,3))figure(3) hold on;plot(x10(:,1),x10(:,4))figure(4) hold on;plot(x10(:,1),x10(:,5))figure(5) hold on;plot(x10(:,1),x10(:,6))figure(6) hold on;plot(x10(:,1),x10(:,7))datamultimap;figure(1) plot(x10(:,1),x10(:,2))figure(2) plot(x10(:,1),x10(:,3))figure(3) plot(x10(:,1),x10(:,4))figure(4) plot(x10(:,1),x10(:,5))figure(5) plot(x10(:,1),x10(:,6))figure(6) plot(x10(:,1),x10(:,7))testdataset1;figure(1) plot(x10(:,1),x10(:,2))figure(2) plot(x10(:,1),x10(:,3))figure(3) plot(x10(:,1),x10(:,4))figure(4) plot(x10(:,1),x10(:,5))figure(5) plot(x10(:,1),x10(:,6))figure(6) plot(x10(:,1),x10(:,7))testdatamultiset;figure(1) plot(x10(:,1),x10(:,2))figure(2) plot(x10(:,1),x10(:,3))figure(3) plot(x10(:,1),x10(:,4))figure(4) plot(x10(:,1),x10(:,5))figure(5) plot(x10(:,1),x10(:,6))figure(6) plot(x10(:,1),x10(:,7))%ParamÃ¨tre des figuresfigure(1)title('Temps d''ajout au début du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')figure(2)title('Temps d''ajout en fin du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')figure(3)title('Temps d''ajout en milieu du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')figure(4)title('Temps de lecture au dÃ©but du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')figure(5)title('Temps de lecture en fin du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')figure(6)title('Temps de lecture au milieu du conteneur')legend('Map', 'Multimap', 'Set', 'Multiset')xlabel('Nombre d''elements dans le conteneur')ylabel('Temps en secondes')
+##### SOURCE END #####
+--></body></html>
